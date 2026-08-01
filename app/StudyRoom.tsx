@@ -163,7 +163,11 @@ function WhiteboardExperience() {
   );
 }
 
-const recordTracks = [{ title: "都选C", mood: "缝纫机乐队 · MP3", src: withBase("/audio/dou-xuan-c.mp3") }];
+const recordTracks = [
+  { title: "热铁皮房顶的夏天", mood: "王赫野 · MP3", src: withBase("/audio/re-tie-pi-fang-ding-de-xia-tian.mp3") },
+  { title: "都选C", mood: "缝纫机乐队 · MP3", src: withBase("/audio/dou-xuan-c.mp3") },
+  { title: "一点 · Live版", mood: "黄子弘凡 / 姚晓棠 · MP3", src: withBase("/audio/yi-dian-live.mp3") },
+];
 
 function RecordPlayerExperience({ trackIndex, playing, onToggle, onStop, onSelectTrack }: {
   trackIndex: number;
