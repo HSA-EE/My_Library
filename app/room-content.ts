@@ -6,12 +6,7 @@ export type BookEntry = {
   colors: [string, string];
 };
 
-export type TravelEntry = {
-  title: string;
-  location: string;
-  year: string;
-  image?: string;
-};
+export type TravelEntry = {`r`n  title: string;`r`n  location: string;`r`n  year: string;`r`n  image?: string;`r`n};`r`n`r`nexport type TravelAlbum = {`r`n  title: string;`r`n  location: string;`r`n  year: string;`r`n  cover?: string;`r`n  photos: TravelEntry[];`r`n};
 
 // 修改书评时，只需要替换对应书目的 note 内容。
 // colors 控制文字封面的两种渐变颜色。
@@ -50,4 +45,4 @@ export const professionalLibrary: BookEntry[] = [
 ];
 
 // 把照片放在 public/travel/ 目录后，将 image 写成 "/travel/文件名.jpg"。
-export const travelGallery: TravelEntry[] = [];
+export const travelGallery: TravelAlbum[] = [];

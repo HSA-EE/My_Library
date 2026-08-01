@@ -8,7 +8,7 @@ import rehypeKatex from "rehype-katex";
 import remarkMath from "remark-math";
 import * as THREE from "three";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
-import { professionalLibrary as professionalContent, readingLibrary as readingContent, travelGallery, type BookEntry } from "./room-content";
+import { professionalLibrary as professionalContent, readingLibrary as readingContent, travelGallery, type BookEntry, type TravelAlbum } from "./room-content";
 import { withBase } from "./base";
 
 type ViewName = "overview" | "seat" | "reading" | "work";
@@ -93,15 +93,34 @@ function LibraryExperience({ title, subtitle, books, activeBook, onSelect, onBac
 }
 
 function TravelGallery() {
+  const [activeAlbum, setActiveAlbum] = useState<TravelAlbum | null>(null);
+
+  if (activeAlbum) {
+    return (
+      <div className="gallery-view">
+        <button className="content-back" onClick={() => setActiveAlbum(null)}>← 返回旅行画廊</button>
+        <div className="content-heading"><div className="content-kicker">Travel Album</div><h2>{activeAlbum.title}</h2><p>{activeAlbum.location} · {activeAlbum.year}</p></div>
+        <div className="gallery-grid album-photo-grid">
+          {activeAlbum.photos.map((photo, index) => (
+            <div className="gallery-placeholder has-photo" key={`${photo.title}-${index}`}>
+              {photo.image && <img className="travel-photo" src={withBase(photo.image)} alt={photo.title} loading="lazy" />}
+              <div className="gallery-matte"><span>{String(index + 1).padStart(2, "0")}</span><strong>{photo.title}</strong><small>{photo.location} · {photo.year}</small></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="gallery-view">
-      <div className="content-heading"><div className="content-kicker">Travel Archive</div><h2>旅行画廊</h2><p>留给真正去过的地方。照片、地点和年份将在这里组成一份私人旅行索引。</p></div>
+      <div className="content-heading"><div className="content-kicker">Travel Archive</div><h2>旅行画廊</h2><p>每一张卡片代表一次旅行，点击后查看这次旅行的完整照片。</p></div>
       <div className="gallery-grid">
-        {travelGallery.map((entry, index) => (
-          <div className={`gallery-placeholder gallery-placeholder-${index + 1} ${entry.image ? "has-photo" : ""}`} key={`${entry.title}-${index}`}>
-            {entry.image && <img className="travel-photo" src={withBase(entry.image)} alt={`${entry.title}，${entry.location}`} loading="lazy" />}
-            <div className="gallery-matte"><span>{String(index + 1).padStart(2, "0")}</span><strong>{entry.title}</strong><small>{entry.location} · {entry.year}</small></div>
-          </div>
+        {travelGallery.map((album, index) => (
+          <button className={`gallery-placeholder gallery-album-card gallery-placeholder-${index + 1}`} key={`${album.title}-${index}`} onClick={() => setActiveAlbum(album)}>
+            {album.cover && <img className="travel-photo" src={withBase(album.cover)} alt={album.title} loading="lazy" />}
+            <div className="gallery-matte"><span>{String(index + 1).padStart(2, "0")}</span><strong>{album.title}</strong><small>{album.location} · {album.year} · {album.photos.length} 张照片</small></div>
+          </button>
         ))}
       </div>
     </div>
