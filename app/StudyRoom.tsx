@@ -164,6 +164,9 @@ function WhiteboardExperience() {
 }
 
 const recordTracks = [
+  { title: "午夜台灯", mood: "A minor · 24 sec", src: withBase("/audio/midnight-lamp.wav") },
+  { title: "雨后窗边", mood: "D major · 24 sec", src: withBase("/audio/after-rain.wav") },
+  { title: "清晨演算", mood: "C lydian · 24 sec", src: withBase("/audio/morning-compute.wav") },
   { title: "热铁皮房顶的夏天", mood: "王赫野 · MP3", src: withBase("/audio/re-tie-pi-fang-ding-de-xia-tian.mp3") },
   { title: "都选C", mood: "缝纫机乐队 · MP3", src: withBase("/audio/dou-xuan-c.mp3") },
   { title: "一点 · Live版", mood: "黄子弘凡 / 姚晓棠 · MP3", src: withBase("/audio/yi-dian-live.mp3") },
