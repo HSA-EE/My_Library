@@ -163,11 +163,7 @@ function WhiteboardExperience() {
   );
 }
 
-const recordTracks = [
-  { title: "午夜台灯", mood: "A minor · 24 sec", src: withBase("/audio/midnight-lamp.wav") },
-  { title: "雨后窗边", mood: "D major · 24 sec", src: withBase("/audio/after-rain.wav") },
-  { title: "清晨演算", mood: "C lydian · 24 sec", src: withBase("/audio/morning-compute.wav") },
-];
+const recordTracks = [{ title: "都选C", mood: "缝纫机乐队 · MP3", src: withBase("/audio/dou-xuan-c.mp3") }];
 
 function RecordPlayerExperience({ trackIndex, playing, onToggle, onStop, onSelectTrack }: {
   trackIndex: number;
