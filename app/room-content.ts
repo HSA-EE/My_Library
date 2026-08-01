@@ -65,10 +65,10 @@ export const travelGallery: TravelAlbum[] = [
     year: "2026",
     cover: "/travel/guangzhou/guangzhou-01.jpg",
     photos: [
-      { title: "广州 · 01", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-01.jpg" },
-      { title: "广州 · 02", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-02.jpg" },
-      { title: "广州 · 03", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-03.jpg" },
-      { title: "广州 · 04", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-04.jpg" },
+      { title: "广州 · I", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-01.jpg" },
+      { title: "广州 · II", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-02.jpg" },
+      { title: "广州 · III", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-03.jpg" },
+      { title: "广州 · IV", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-04.jpg" },
     ],
   },
   {
@@ -77,8 +77,8 @@ export const travelGallery: TravelAlbum[] = [
     year: "2026",
     cover: "/travel/jiangxi/jiangxi-cover.jpg",
     photos: [
-      { title: "江西 · 01", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-01.jpg" },
-      { title: "江西 · 02", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-02.jpg" },
+      { title: "江西 · I", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-01.jpg" },
+      { title: "江西 · II", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-02.jpg" },
       { title: "江西 · 封面", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-cover.jpg" },
     ],
   },
