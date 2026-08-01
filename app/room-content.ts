@@ -45,4 +45,28 @@ export const professionalLibrary: BookEntry[] = [
 ];
 
 // 把照片放在 public/travel/ 目录后，将 image 写成 "/travel/文件名.jpg"。
-export const travelGallery: TravelAlbum[] = [];
+export const travelGallery: TravelAlbum[] = [
+  {
+    title: "广州",
+    location: "广州",
+    year: "2026",
+    cover: "/travel/guangzhou/guangzhou-01.jpg",
+    photos: [
+      { title: "广州 · 01", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-01.jpg" },
+      { title: "广州 · 02", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-02.jpg" },
+      { title: "广州 · 03", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-03.jpg" },
+      { title: "广州 · 04", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-04.jpg" },
+    ],
+  },
+  {
+    title: "江西",
+    location: "江西",
+    year: "2026",
+    cover: "/travel/jiangxi/jiangxi-cover.jpg",
+    photos: [
+      { title: "江西 · 01", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-01.jpg" },
+      { title: "江西 · 02", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-02.jpg" },
+      { title: "江西 · 封面", location: "江西", year: "2026", image: "/travel/jiangxi/jiangxi-cover.jpg" },
+    ],
+  },
+];
