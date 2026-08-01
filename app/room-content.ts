@@ -6,7 +6,20 @@ export type BookEntry = {
   colors: [string, string];
 };
 
-export type TravelEntry = {`r`n  title: string;`r`n  location: string;`r`n  year: string;`r`n  image?: string;`r`n};`r`n`r`nexport type TravelAlbum = {`r`n  title: string;`r`n  location: string;`r`n  year: string;`r`n  cover?: string;`r`n  photos: TravelEntry[];`r`n};
+export type TravelEntry = {
+  title: string;
+  location: string;
+  year: string;
+  image?: string;
+};
+
+export type TravelAlbum = {
+  title: string;
+  location: string;
+  year: string;
+  cover?: string;
+  photos: TravelEntry[];
+};
 
 // 修改书评时，只需要替换对应书目的 note 内容。
 // colors 控制文字封面的两种渐变颜色。

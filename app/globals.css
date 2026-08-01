@@ -248,4 +248,6 @@ button { font: inherit; }
 }
 
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
-`r`n.gallery-album-card { border: 0; width: 100%; text-align: left; cursor: pointer; font: inherit; }`r`n.gallery-album-card:hover { filter: brightness(1.08); }`r`n
+
+.gallery-album-card { border: 0; width: 100%; text-align: left; cursor: pointer; font: inherit; }
+.gallery-album-card:hover { filter: brightness(1.08); }
