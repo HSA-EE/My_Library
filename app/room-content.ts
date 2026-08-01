@@ -63,9 +63,10 @@ export const travelGallery: TravelAlbum[] = [
     title: "广州",
     location: "广州",
     year: "2026",
-    cover: "/travel/guangzhou/guangzhou-01.jpg",
+    cover: "/travel/guangzhou/guangzhou-cover.jpg",
     photos: [
       { title: "广州 · I", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-01.jpg" },
+      { title: "广州 · 封面", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-cover.jpg" },
       { title: "广州 · II", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-02.jpg" },
       { title: "广州 · III", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-03.jpg" },
       { title: "广州 · IV", location: "广州", year: "2026", image: "/travel/guangzhou/guangzhou-04.jpg" },
