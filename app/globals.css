@@ -250,4 +250,7 @@ button { font: inherit; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 
 .gallery-album-card { border: 0; width: 100%; text-align: left; cursor: pointer; font: inherit; }
-.gallery-album-card:hover { filter: brightness(1.08); }
+.gallery-album-card:hover { filter: brightness(1.08); }.gallery-album-card { aspect-ratio: 4 / 3; min-height: 0; }
+.gallery-album-card .travel-photo { position: absolute; inset: 11px; width: calc(100% - 22px); height: calc(100% - 22px); object-fit: cover; }
+.gallery-album-card .gallery-matte { position: absolute; inset: 11px; min-height: 0; background: linear-gradient(180deg, transparent 38%, rgba(8,10,9,.82)); }
+.gallery-album-card .gallery-matte span { color: #fff; }
